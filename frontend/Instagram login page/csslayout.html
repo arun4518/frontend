@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .challenge {
+  width: 1000px;
+  margin: 30px auto;
+  
+  display: grid;
+  grid-template-rows: 100px 200px 400px 100px;
+  grid-template-columns: repeat(3, 1fr) 200px;
+  grid-gap: 35px;
+  grid-template-areas: "head head head ."
+                      "small-box-1 small-box-2 small-box-3 side"
+                      "main main main side"
+                      "foot foot foot foot";
+  
+  & > * {
+    background-color: orangered;
+    padding: 15px;
+    color: white;
+    font-size: 30px;
+    font-family: sans-serif;
+  }
+  .header {
+    grid-area: head;
+  }
+  
+  .small-box-1 { grid-area: small-box-1; }
+  .small-box-2 { grid-area: small-box-2; }
+  .small-box-3 { grid-area: small-box-3; }
+  
+  .sidebar {
+    grid-area: side;
+  }
+  
+  .main-content {
+    grid-area: main;
+  }
+  
+  .footer {
+
+
+</style>
+<body>
+    <div class="challenge">
+        <div class="header">Header</div>
+        <div class="small-box-1">Small box</div>
+        <div class="small-box-2">Small box</div>
+        <div class="small-box-3">Small box</div>
+        <div class="main-content">Main content</div>
+        <div class="sidebar">Sidebar</div>
+        <div class="footer">Footer</div>
+      </div>
+</body>
+</html>
